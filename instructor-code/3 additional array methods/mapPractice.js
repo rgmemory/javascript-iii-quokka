@@ -1,23 +1,27 @@
-var answers = ["yes", "no", "yes", "no", "no", "no"]
+var answers = ["yes", "no", "yes", "no", "no", "no", 15]
 
+for (var i=0;i<answers.length;i++){
+    answers[i]
+}
+
+function cb(elem, index, wholeArray){
+
+}
+
+var flippedAnswers = answers.map((answer) => {
+    if (answer === "yes"){
+        return "no"
+    } else if(answer ==="no"){
+        return "yes"
+    } else {
+        return "I don't know"
+    }
+})
+flippedAnswers
 //map over answers
 //change yes into no and no into yes
 
 //DESIRED RESULT = ["no", "yes", "no", "yes", "yes", "yes"]
-
-var flippedAnswers = answers.map(current => {
-    // if(current === "yes"){
-    //     return "no"
-    // }else if(current === "no"){
-    //     return "yes"
-    // }else{
-    //     return "I dont'know"
-    // }
-
-    return current === "yes" ? "no" : "yes"
-})
-
-// flippedAnswers
 
 
 var employees = [
@@ -31,13 +35,17 @@ var employees = [
 //split on the - in name and turn name into first_name and last_name
 //save it to a new array variable
 
-var newArray = employees.map(current => {
-    current += 3;
-    return current;
+var newEmployees = employees.map(employee=>{
+    let names = employee.name.split('-');
+    names
+    return {
+        first_name:names[0],
+        last_name:names[1],
+        pay: employee.pay + 3
+    }
 })
 
-newArray
-
+newEmployees
 
 //DESIRED RESULT = 
 /*

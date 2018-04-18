@@ -9,6 +9,15 @@ var drink = {
 //if the value is 'orange' change it to 'cherry'
 
 
+function (obj){
+    for(var key i obj){
+        if(!obj[key]){
+            return false
+        }
+    }
+    return true;
+}
+
 
 //Write a function, called 'checkValid', that takes in an object like drink 
 //loop over the object and check if values are falsy
